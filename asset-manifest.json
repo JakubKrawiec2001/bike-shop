@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bike-shop/static/css/main.30ebb337.css",
-    "main.js": "/bike-shop/static/js/main.d46800a3.js",
+    "main.js": "/bike-shop/static/js/main.f46b7b20.js",
     "static/js/787.d9e22253.chunk.js": "/bike-shop/static/js/787.d9e22253.chunk.js",
     "static/media/bike-6.png": "/bike-shop/static/media/bike-6.7d1b6716d51cabd02c9b.png",
     "static/media/bike-5.png": "/bike-shop/static/media/bike-5.ce0d58221073a99e9fb6.png",
@@ -72,11 +72,11 @@
     "static/media/slick.woff": "/bike-shop/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/bike-shop/index.html",
     "main.30ebb337.css.map": "/bike-shop/static/css/main.30ebb337.css.map",
-    "main.d46800a3.js.map": "/bike-shop/static/js/main.d46800a3.js.map",
+    "main.f46b7b20.js.map": "/bike-shop/static/js/main.f46b7b20.js.map",
     "787.d9e22253.chunk.js.map": "/bike-shop/static/js/787.d9e22253.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30ebb337.css",
-    "static/js/main.d46800a3.js"
+    "static/js/main.f46b7b20.js"
   ]
 }
