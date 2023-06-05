@@ -1,0 +1,261 @@
+@use "../../colors" as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	.nav-one {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5em;
+		background-color: $nav-one-color;
+		font-weight: 200;
+		.nav-l {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5em;
+			color: white;
+			.icon {
+				font-size: 1.4rem;
+			}
+			path {
+				stroke: white;
+			}
+			.nav-l-item {
+				transition: all 0.3s;
+			}
+			.nav-l-item:hover {
+				scale: 0.91;
+			}
+		}
+		.sale {
+			display: none;
+		}
+		.nav-r {
+			display: flex;
+			gap: 0.5em;
+
+			.btn-nav-one {
+				padding: 0.2em;
+				background: none;
+				border: transparent;
+				color: white;
+				font-weight: 200;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+			.btn-nav-one:hover {
+				scale: 0.91;
+			}
+		}
+	}
+	.nav-two {
+		background-color: $hero-color;
+		.nav-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1em;
+
+			.menu-body {
+				display: none;
+			}
+			.burger-menu-body {
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 3em;
+				padding: 2em;
+				right: -100%;
+				top: 15em;
+				width: 80%;
+				background-color: $gray;
+				border-radius: 10px;
+				transform: translateX(50%);
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+					rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+				border: 3px solid $nav-one-color;
+				transition: 0.4s ease-in-out;
+				z-index: 100;
+				.burger-menu-items {
+					font-size: 3rem;
+					color: $hero-color;
+					font-weight: 200;
+				}
+			}
+
+			.open {
+				right: 50%;
+			}
+			.logo {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-weight: bold;
+				font-style: italic;
+				font-size: 3rem;
+
+				.name {
+					font-size: 1.6rem;
+					font-weight: bold;
+				}
+			}
+
+			.basket {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0.2em;
+				margin-bottom: 0.2em;
+				font-size: 2rem;
+				border-radius: 100%;
+				background: $hero-gradient;
+				cursor: pointer;
+				.cart-items-number {
+					font-size: 3rem;
+					color: red;
+				}
+			}
+
+			.menu-btn {
+				font-size: 4rem;
+				background: none;
+				border: transparent;
+				color: white;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		.nav-one {
+			padding: 0.5em;
+			.nav-l {
+				.icon {
+					margin-left: 0.5em;
+					font-size: 2rem;
+				}
+				.nav-l-item {
+					font-size: 2rem;
+				}
+			}
+			.nav-r {
+				.btn-nav-one {
+					margin-right: 0.5em;
+					font-size: 2rem;
+				}
+			}
+		}
+		.nav-two {
+			.nav-container {
+				.burger-menu-body {
+					top: 20em;
+					width: 60%;
+					.burger-menu-items {
+						font-size: 4rem;
+					}
+				}
+				.logo {
+					font-size: 6rem;
+					.name {
+						font-size: 2.5rem;
+					}
+				}
+
+				.basket {
+					font-size: 4rem;
+				}
+
+				.menu-btn {
+					font-size: 6rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		.nav-one {
+			.nav-l {
+				.icon {
+					font-size: 1.5rem;
+				}
+				.nav-l-item {
+					font-size: 1.5rem;
+				}
+			}
+			.nav-r {
+				.btn-nav-one {
+					font-size: 1.5rem;
+				}
+			}
+		}
+		.nav-two {
+			padding: 1em;
+			.nav-container {
+				.menu-body {
+					display: flex;
+					gap: 1em;
+					order: 1;
+					.nav-link {
+						padding: 0.2em;
+						font-size: 2rem;
+						font-weight: 200;
+						transition: all 0.4s ease-in;
+					}
+					.nav-link:hover {
+						border-bottom: 3px solid $red;
+					}
+				}
+				.logo {
+					order: 0;
+					font-size: 3rem;
+					.name {
+						font-size: 2rem;
+					}
+				}
+
+				.basket {
+					font-size: 3rem;
+					margin-bottom: 0;
+					margin-right: 0.2em;
+					order: 2;
+				}
+
+				.menu-btn {
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.nav {
+		.nav-one {
+			.sale {
+				display: block;
+				font-size: 1.5rem;
+				color: white;
+			}
+		}
+		.nav-two {
+			padding-left: 2em;
+			padding-right: 2em;
+			.nav-container {
+				.menu-body {
+					gap: 2.5em;
+					.nav-link {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+}

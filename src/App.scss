@@ -1,0 +1,96 @@
+@use "./colors" as *;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.stroke-text {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: $red;
+}
+.active {
+	border-bottom: 3px solid $red;
+}
+.sale-product {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	border-radius: 100%;
+	background-color: $sale-color;
+	color: white;
+}
+.sale-product-price {
+	text-decoration: line-through;
+	font-style: italic;
+	color: red;
+}
+.sale-product-new-price {
+	position: absolute;
+	font-size: 1.6rem;
+}
+
+.btn {
+	padding: 0.8em 1em;
+	font-size: 1.4rem;
+	background-color: $red;
+	color: white;
+	border: transparent;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.btn:hover {
+	scale: 0.91;
+}
+
+// BTN MEDIA
+@media (min-width: 768px) {
+	.btn {
+		font-size: 1.4rem;
+	}
+}
+@media (min-width: 1200px) {
+	.btn {
+		padding: 1em 1em;
+		font-size: 1.6rem;
+	}
+}
+
+// WRAPPER MEDIA
+@media (min-width: 2000px) {
+	.wrapper {
+		max-width: 2000px;
+	}
+}
+
+@media (max-width: 1024px) {
+	* {
+		overflow-x: hidden;
+	}
+}

@@ -1,0 +1,116 @@
+@use "../../colors" as *;
+.shopping-cart {
+	margin-top: 140px;
+	min-height: 100vh;
+
+	.shopping-cart-title {
+		padding: 0.5em;
+		font-size: 2rem;
+	}
+	.shopping-cart-container {
+		.no-item {
+			margin: 10em auto;
+			text-align: center;
+			font-size: 1.4rem;
+		}
+		.shopping-cart-products-box {
+			display: flex;
+			flex-direction: column;
+			gap: 4em;
+			margin-top: 5em;
+			margin-bottom: 5em;
+			.shopping-cart-product {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 2em 0;
+				border-top: 2px solid $gray;
+				border-bottom: 2px solid $gray;
+				.shopping-cart-img {
+					padding: 2em;
+					width: 70%;
+					background-color: $gray;
+				}
+				.shopping-cart-product-text-box {
+					text-align: center;
+					.shopping-cart-product-name {
+						padding-top: 1em;
+						padding-bottom: 0.5em;
+						font-size: 1.4rem;
+					}
+
+					.shopping-cart-product-price {
+						font-size: 1.4rem;
+					}
+				}
+				.shopping-cart-quantity-box {
+					display: flex;
+					align-items: center;
+					gap: 1em;
+					margin-top: 1em;
+					padding: 1em 2em;
+					border: 2px solid $gray;
+					.shopping-cart-quantity {
+						font-size: 1.4rem;
+					}
+					.shopping-cart-btn {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 1em;
+						font-size: 1.4rem;
+						border: transparent;
+						border-radius: 100%;
+						background-color: $gray;
+						cursor: pointer;
+						transition: all 0.3s ease-in-out;
+					}
+					.shopping-cart-btn:hover {
+						background-color: $dark-white;
+					}
+				}
+			}
+			.shopping-cart-total-price-box {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.shopping-cart-total-price-text {
+					text-align: center;
+					font-size: 2rem;
+					.shopping-cart-total-price-title {
+						font-weight: bold;
+					}
+					.shopping-cart-total-price {
+						padding-bottom: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.shopping-cart {
+		margin-top: 200px;
+
+		.shopping-cart-title {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.shopping-cart {
+		.shopping-cart-container {
+			.shopping-cart-products-box {
+				.shopping-cart-product {
+					flex-direction: row;
+					justify-content: space-between;
+					.shopping-cart-img {
+						width: 20%;
+					}
+				}
+			}
+		}
+	}
+}

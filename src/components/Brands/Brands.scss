@@ -1,0 +1,40 @@
+@use "../../colors" as *;
+
+.main {
+	// background-color: $gray;
+	.brands-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1em;
+		padding: 1em 0.5em;
+
+		.brand {
+			width: 30%;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.main {
+		.brands-container {
+			.brand {
+				width: 25%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.main {
+		.brands-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 3em;
+			.brand {
+				width: 15%;
+			}
+		}
+	}
+}

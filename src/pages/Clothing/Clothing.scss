@@ -1,0 +1,159 @@
+@use "../../colors" as *;
+.clothing {
+	min-height: 100vh;
+	margin-top: 200px;
+	margin-bottom: 8em;
+	.clothing-category {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5em;
+
+		.clothing-category-btn {
+			// width: 20%;
+			padding: 0 0.2em;
+			font-size: 1.2rem;
+			font-weight: bold;
+			background: none;
+			border: transparent;
+			border-right: 3px solid $dark-white;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		.clothing-category-btn:hover {
+			background-color: $gray;
+		}
+		.clothing-category-btn:first-child {
+			border-left: 3px solid $dark-white;
+		}
+	}
+	.search-results {
+		padding-top: 1em;
+		padding-left: 0.5em;
+		padding-bottom: 0.5em;
+		font-size: 1.6rem;
+		color: $dark-white;
+	}
+	.clothing-container {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 3em;
+		.clothing-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 2em;
+			position: relative;
+			padding: 1em;
+			width: 100%;
+			background-color: $gray;
+			border-radius: 10px;
+
+			.clothing-basket-btn {
+				position: absolute;
+				top: 0.5em;
+				right: 0.2em;
+				font-size: 3rem;
+				background: none;
+				border: transparent;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
+			.clothing-basket-btn:hover {
+				scale: 1.1;
+			}
+			.clothing-box-img {
+				display: flex;
+				margin: 0 auto;
+				width: 50%;
+			}
+			.clothing-box-body {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-top: 0.5em;
+				border-top: 1px solid $dark-gray;
+
+				.clothing-box-text {
+					.clothing-box-name {
+						font-size: 1.6rem;
+						font-weight: bold;
+					}
+					.clothing-box-price {
+						font-size: 1.6rem;
+					}
+				}
+				.clothing-box-favourite {
+					font-size: 3rem;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+				}
+				.clothing-box-favourite:hover {
+					scale: 1.1;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.clothing {
+		margin-top: 250px;
+		.clothing-category {
+			.clothing-category-btn {
+				padding: 0 1em;
+				font-size: 2rem;
+			}
+		}
+		.search-results {
+			margin-left: 2em;
+		}
+		.clothing-container {
+			.clothing-box {
+				width: 40%;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.clothing {
+		.clothing-category {
+			justify-content: flex-start;
+			margin-left: 2em;
+			.clothing-category {
+				padding: 0.3em 0;
+				width: 15%;
+			}
+		}
+		.search-results {
+			margin-left: 1.2em;
+			padding-left: 0;
+		}
+		.clothing-container {
+			.clothing-box {
+				width: 30%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.clothing {
+		.clothing-category {
+			.clothing-category {
+				width: 10%;
+			}
+		}
+	}
+}
+@media (min-width: 2000px) {
+	.clothing {
+		.clothing-category {
+			margin-left: 3em;
+		}
+		.search-results {
+			margin-left: 2.2em;
+		}
+	}
+}

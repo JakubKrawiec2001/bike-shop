@@ -1,0 +1,195 @@
+@use "../../colors" as *;
+
+.bestseller-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 113px;
+
+	.bestseller-page-l {
+		height: 32vh;
+		overflow: hidden;
+		.bestseller-page-l-img {
+			width: 100%;
+		}
+	}
+	.bestseller-page-r {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background: $hero-gradient;
+
+		.bestseller-page-text-box {
+			padding-top: 2em;
+			text-align: center;
+			color: white;
+
+			.bestseller-page-bike-name {
+				font-size: 2.6rem;
+				font-weight: bold;
+			}
+			.bestseller-page-bike-limited {
+				font-size: 2rem;
+				color: $dark-white;
+			}
+			.bestseller-page-bike-price {
+				padding-top: 0.5em;
+				font-size: 3rem;
+			}
+			.bestseller-page-bike-rate {
+				font-size: 3rem;
+				color: $sale-color;
+			}
+			.bestseller-page-bike-description {
+				padding: 1em;
+				font-size: 1.6rem;
+			}
+			.bestseller-page-bike-img-box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1em;
+				margin: 3em 0;
+
+				.bestseller-page-bike-img {
+					width: 30%;
+					transition: all 0.3s ease-in-out;
+					cursor: pointer;
+				}
+				.bestseller-page-bike-img:hover {
+					scale: 3;
+				}
+			}
+		}
+		.bestseller-page-btn {
+			width: 100%;
+			padding: 1.5em 0;
+			font-size: 1.6rem;
+			font-weight: bold;
+			border: transparent;
+			color: white;
+			background-color: $red;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+		}
+		.bestseller-page-btn:hover {
+			background-color: $sale-color;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.bestseller-page {
+		margin-top: 186px;
+		.bestseller-page-l {
+			height: 40vh;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.bestseller-page {
+		margin-top: 134px;
+		.bestseller-page-l {
+			height: 40vh;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.bestseller-page {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-top: 133px;
+		height: 86vh;
+
+		.bestseller-page-l {
+			width: 70%;
+			height: 86vh;
+			.bestseller-page-l-img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.bestseller-page-r {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			width: 30%;
+			height: 100%;
+			background: $hero-gradient;
+
+			.bestseller-page-text-box {
+				padding-top: 8em;
+				padding-left: 3em;
+				width: 100%;
+				text-align: left;
+				color: white;
+
+				.bestseller-page-bike-name {
+					font-size: 4rem;
+					font-weight: bold;
+				}
+				.bestseller-page-bike-limited {
+					font-size: 2.4rem;
+					color: $dark-white;
+				}
+				.bestseller-page-bike-price {
+					padding: 0.5em 0 0.5em 0;
+					font-size: 3rem;
+				}
+				.bestseller-page-bike-rate {
+					font-size: 3rem;
+					color: $sale-color;
+				}
+				.bestseller-page-bike-description {
+					padding: 1em 1em 0 0;
+					font-size: 2rem;
+				}
+				.bestseller-page-bike-img-box {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					gap: 1em;
+					margin-top: 3em;
+
+					.bestseller-page-bike-img {
+						width: 20%;
+						transition: all 0.3s ease-in-out;
+						cursor: pointer;
+					}
+					.bestseller-page-bike-img:hover {
+						scale: 3;
+					}
+				}
+			}
+			.bestseller-page-btn {
+				width: 100%;
+				padding: 1.5em 0;
+				font-size: 3rem;
+				font-weight: bold;
+				border: transparent;
+				color: white;
+				background-color: $red;
+				transition: all 0.3s ease-in-out;
+				cursor: pointer;
+			}
+			.bestseller-page-btn:hover {
+				background-color: $sale-color;
+			}
+		}
+	}
+}
+
+@media (min-width: 2000px) {
+	.bestseller-page {
+		height: 90vh;
+		.bestseller-page-l {
+			height: 90vh;
+		}
+	}
+}

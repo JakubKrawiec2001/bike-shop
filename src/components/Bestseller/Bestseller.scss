@@ -1,0 +1,42 @@
+@use "../../colors" as *;
+
+.bestseller {
+	background-image: url("../../assets/images/bestseller-bg.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.bestseller-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 60vh;
+
+		.bestseller-name {
+			font-size: 2.2rem;
+			font-weight: bold;
+			color: white;
+		}
+		.bestseller-description {
+			padding-top: 0.5em;
+			padding-bottom: 2em;
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: $dark-white;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.bestseller {
+		.bestseller-container {
+			.bestseller-name {
+				font-size: 3rem;
+			}
+			.bestseller-description {
+				font-size: 2rem;
+			}
+		}
+	}
+}

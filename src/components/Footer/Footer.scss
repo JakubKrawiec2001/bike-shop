@@ -1,0 +1,55 @@
+@use "../../colors" as *;
+.footer {
+	background-color: $hero-color;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	text-align: center;
+	color: white;
+	.footer-text {
+		padding: 0 0.5em;
+		font-size: 1.6rem;
+	}
+	.footer-socials-title {
+		padding-top: 1em;
+
+		font-size: 1.8rem;
+		color: $red;
+	}
+	.footer-socials-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+		padding-top: 0.5em;
+		.footer-socials-item {
+			font-size: 1.6rem;
+			transition: all 0.4s;
+			cursor: pointer;
+		}
+		.footer-socials-item:hover {
+			scale: 1.2;
+			color: $red;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.footer {
+		padding-top: 8em;
+		padding-bottom: 8em;
+		.footer-text {
+			padding: 0;
+			font-size: 2rem;
+		}
+		.footer-socials-title {
+			font-size: 2.6rem;
+		}
+		.footer-socials-box {
+			padding-top: 1em;
+			gap: 1em;
+			.footer-socials-item {
+				font-size: 3rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,211 @@
+@use "../../colors" as *;
+.popup {
+	display: flex;
+	align-items: center;
+	gap: 3em;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	width: 80%;
+	height: 5vh;
+	background-color: #6fd64975;
+	border-radius: 25px;
+	z-index: 10000;
+	visibility: hidden;
+	transition: all 0.4s ease-in-out;
+	overflow: visible;
+	img {
+		width: 20%;
+	}
+	p {
+		color: white;
+		font-size: 1.6rem;
+		font-weight: 200;
+	}
+}
+
+.open-popup {
+	top: 10%;
+	transform: translate(-50%, -50%) scale(1);
+	visibility: visible;
+}
+
+.login {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 1000;
+	background-image: url("../../assets/images/login.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.back-to-home-btn {
+		position: absolute;
+		top: 0.5em;
+		left: 0.5em;
+		background: none;
+		border: transparent;
+		font-size: 2.4rem;
+		color: white;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+	}
+	.back-to-home-btn:hover {
+		color: $red;
+	}
+	.login-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		.login-panel-1 {
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+			width: 90%;
+			.login-panel-welcome {
+				text-align: center;
+				font-size: 3rem;
+				font-weight: 400;
+				color: white;
+			}
+			.login-form {
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+				.login-panel-input {
+					padding: 1em 1em 1em 1em;
+					width: 100%;
+					background-color: rgba(255, 255, 255, 0.2);
+					border: transparent;
+					border-radius: 25px;
+					font-size: 1.4rem;
+					color: white;
+				}
+				input::-webkit-input-placeholder {
+					color: white;
+					font-weight: 200;
+				}
+				.login-error {
+					text-align: center;
+					font-size: 1.4rem;
+					font-weight: bold;
+					color: red;
+				}
+
+				.sign-in-btn {
+					padding: 0.5em;
+					font-size: 2rem;
+					border-radius: 25px;
+					background-color: $red;
+					color: white;
+					border: transparent;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+				}
+				.sign-in-btn:hover {
+					scale: 0.9;
+				}
+			}
+
+			.login-panel-1-remember-box {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 1.4rem;
+				.checkbox-box {
+					display: flex;
+					align-items: center;
+					color: white;
+					gap: 0.5em;
+				}
+				.forgot-password-btn {
+					background: none;
+					border: transparent;
+					color: white;
+					cursor: pointer;
+					transition: all 0.3s;
+				}
+				.forgot-password-btn:hover {
+					color: $red;
+				}
+			}
+		}
+		.login-panel-2 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.login-panel-2-text {
+				font-size: 2rem;
+				padding: 2em 0;
+				color: white;
+			}
+			.login-panel-2-btn-box {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				.sign-in-with-btn {
+					padding: 0.3em 0;
+					text-align: center;
+					font-size: 2rem;
+					width: 150px;
+					background-color: white;
+					border: transparent;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+				}
+				.sign-in-with-btn:hover {
+					scale: 0.9;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.popup {
+		width: 50%;
+		p {
+			font-size: 2rem;
+		}
+	}
+	.login {
+		.back-to-home-btn {
+			font-size: 4rem;
+		}
+		.login-container {
+			.login-panel-1 {
+				width: 40%;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.login {
+		.login-container {
+			.login-panel-1 {
+				width: 40%;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.popup {
+		width: 20%;
+		p {
+			font-size: 2rem;
+		}
+	}
+	.login {
+		.login-container {
+			.login-panel-1 {
+				width: 20%;
+			}
+		}
+	}
+}

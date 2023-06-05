@@ -1,0 +1,164 @@
+@use "../../colors" as *;
+.about-text {
+	position: relative;
+	padding: 2em 0.5em;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 200;
+}
+
+.about-text::before {
+	content: "";
+	position: absolute;
+	top: 1em;
+	right: 50%;
+	transform: translate(50%);
+	width: 50%;
+	height: 3px;
+	background-color: $red;
+}
+.about-text:first-child::before {
+	display: none;
+}
+
+.about {
+	margin-top: 113px;
+
+	.about-hero-bg {
+		position: relative;
+		background-image: url("../../assets/images/about/about-hero.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 70vh;
+		z-index: 0;
+		.about-hero-shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+			z-index: 1;
+			.about-hero-text-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				height: 100%;
+				color: white;
+				.about-hero-title {
+					font-size: 3rem;
+					z-index: 2;
+				}
+				.about-hero-title-text {
+					font-size: 1.6rem;
+					font-weight: 200;
+				}
+			}
+		}
+	}
+	.about-container {
+		.about-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.about-img {
+				width: 100%;
+			}
+		}
+
+		.about-quote-box {
+			background-color: $gray;
+			margin-bottom: 2em;
+			.about-quote-icon {
+				margin-top: 0.2em;
+				margin-left: 0.2em;
+				font-size: 5rem;
+				color: $red;
+			}
+			.about-quote-text {
+				padding: 0.5em 0.5em 2em 0.5em;
+				text-align: center;
+				font-size: 1.6rem;
+				font-weight: bold;
+			}
+			.about-quote-author {
+				padding-right: 0.5em;
+				padding-bottom: 0.5em;
+				text-align: right;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.about-text {
+		font-size: 2.6rem;
+	}
+	.about {
+		.about-hero-bg {
+			.about-hero-shadow {
+				.about-hero-text-box {
+					.about-hero-title {
+						font-size: 4rem;
+					}
+					.about-hero-title-text {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+		.about-container {
+			margin-top: 4em;
+			.about-quote-box {
+				margin-bottom: 4rem;
+				.about-quote-text {
+					font-size: 2.4rem;
+				}
+				.about-quote-author {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.about-text {
+		padding: 0 1em;
+	}
+	.about-text::before {
+		top: -1em;
+	}
+	.about {
+		margin-top: 133px;
+		.about-container {
+			.about-box {
+				flex-direction: row;
+				margin: 8em auto;
+				.about-img {
+					width: 50%;
+				}
+			}
+			.about-box-second {
+				.about-text {
+					order: 0;
+				}
+				.about-img {
+					order: 1;
+				}
+			}
+			.about-quote-box {
+				margin: 0;
+				border-radius: 10px;
+				.about-quote-icon {
+					margin-top: 0.5em;
+					margin-left: 0.5em;
+				}
+			}
+		}
+	}
+}
